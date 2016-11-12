@@ -7,14 +7,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.hardware.camera2.params.ColorSpaceTransform;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by win764-1 on 2016/11/1.
@@ -80,46 +75,46 @@ public class TimeView extends View implements Runnable {
      * @param attrs
      */
     private void init(Context context, AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TimeView);
-        borderColor = ta.getColor(R.styleable.TimeView_borderColor, Color.BLACK);
-        circleBackground = ta.getColor(R.styleable.TimeView_circleBackground, Color.WHITE);
-        borderWidth = ta.getDimension(R.styleable.TimeView_borderWidth,
+        TypedArray ta = context.obtainStyledAttributes(attrs, com.example.administrator.clock.R.styleable.TimeView);
+        borderColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_borderColor, Color.BLACK);
+        circleBackground = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_circleBackground, Color.WHITE);
+        borderWidth = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_borderWidth,
                 SizeUtils.dp2px(context, 1));
-        minScaleColor = ta.getColor(R.styleable.TimeView_minScaleColor, Color.BLACK);
-        midScaleColor = ta.getColor(R.styleable.TimeView_midScaleColor, Color.BLACK);
-        maxScaleColor = ta.getColor(R.styleable.TimeView_maxScaleColor, Color.BLACK);
-        minScaleLength = ta.getDimension(R.styleable.TimeView_minScaleLength,
+        minScaleColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_minScaleColor, Color.BLACK);
+        midScaleColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_midScaleColor, Color.BLACK);
+        maxScaleColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_maxScaleColor, Color.BLACK);
+        minScaleLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_minScaleLength,
                 SizeUtils.dp2px(context, 7));
-        midScaleLength = ta.getDimension(R.styleable.TimeView_midScaleLength,
+        midScaleLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_midScaleLength,
                 SizeUtils.dp2px(context, 12));
-        maxScaleLength = ta.getDimension(R.styleable.TimeView_maxScaleLength,
+        maxScaleLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_maxScaleLength,
                 SizeUtils.dp2px(context, 14));
-        textColor = ta.getColor(R.styleable.TimeView_textColor, Color.BLACK);
-        textSize = ta.getDimension(R.styleable.TimeView_textSize,
+        textColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_textColor, Color.BLACK);
+        textSize = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_textSize,
                 SizeUtils.dp2px(context, 15));
-        isDrawText = ta.getBoolean(R.styleable.TimeView_isDrawText,true);
-        secondPointerColor = ta.getColor(R.styleable.TimeView_secondPointerColor, Color.RED);
-        minPointerColor = ta.getColor(R.styleable.TimeView_minPointerColor, Color.BLACK);
-        hourPointerColor = ta.getColor(R.styleable.TimeView_hourPointerColor, Color.BLACK);
-        secondPointerLength = ta.getDimension(R.styleable.TimeView_secondPointerLength,
+        isDrawText = ta.getBoolean(com.example.administrator.clock.R.styleable.TimeView_isDrawText,true);
+        secondPointerColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_secondPointerColor, Color.RED);
+        minPointerColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_minPointerColor, Color.BLACK);
+        hourPointerColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_hourPointerColor, Color.BLACK);
+        secondPointerLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_secondPointerLength,
                 SizeUtils.dp2px(context, getWidth() / 3 * 2 / 3));
-        minPointerLength = ta.getDimension(R.styleable.TimeView_minPointerLength,
+        minPointerLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_minPointerLength,
                 SizeUtils.dp2px(context, getWidth() / 3 / 2));
-        hourPointerLength = ta.getDimension(R.styleable.TimeView_hourPointerLength,
+        hourPointerLength = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_hourPointerLength,
                 SizeUtils.dp2px(context, getWidth() / 3 / 3));
-        secondPointerSize = ta.getDimension(R.styleable.TimeView_secondPointerSize,
+        secondPointerSize = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_secondPointerSize,
                 SizeUtils.dp2px(context, 1));
-        minPointerSize = ta.getDimension(R.styleable.TimeView_minPointerSize,
+        minPointerSize = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_minPointerSize,
                 SizeUtils.dp2px(context, 3));
-        hourPointerSize = ta.getDimension(R.styleable.TimeView_hourPointerSize,
+        hourPointerSize = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_hourPointerSize,
                 SizeUtils.dp2px(context, 5));
-        centerPointColor = ta.getColor(R.styleable.TimeView_centerPointColor, Color.BLACK);
-        centerPointSize = ta.getDimension(R.styleable.TimeView_centerPointSize,
+        centerPointColor = ta.getColor(com.example.administrator.clock.R.styleable.TimeView_centerPointColor, Color.BLACK);
+        centerPointSize = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_centerPointSize,
                 SizeUtils.dp2px(context, 5));
-        centerPointRadiu = ta.getDimension(R.styleable.TimeView_centerPointRadiu,
+        centerPointRadiu = ta.getDimension(com.example.administrator.clock.R.styleable.TimeView_centerPointRadiu,
                 SizeUtils.dp2px(context, 1));
-        centerPointType = ta.getString(R.styleable.TimeView_centerPointType);
-        isSecondGoSmooth = ta.getBoolean(R.styleable.TimeView_isSecondGoSmooth,false);
+        centerPointType = ta.getString(com.example.administrator.clock.R.styleable.TimeView_centerPointType);
+        isSecondGoSmooth = ta.getBoolean(com.example.administrator.clock.R.styleable.TimeView_isSecondGoSmooth,false);
         if(isSecondGoSmooth){
             sleepTime = 50;
         }else{
@@ -153,7 +148,7 @@ public class TimeView extends View implements Runnable {
         textHeight = textBound.bottom - textBound.top;
         textWight = textBound.right - textBound.left;
         canvas.rotate(degree);
-        canvas.translate(0, maxScaleLength +textHeight- getWidth() / 3);
+        canvas.translate(0, maxScaleLength +textHeight*3f/4- getWidth() / 3);
         canvas.rotate(-degree);
 
 //        canvas.drawText(text,-(textBound.right - textBound.left)/2,
@@ -161,7 +156,7 @@ public class TimeView extends View implements Runnable {
         canvas.drawText(text, -textWight / 2,
                 textHeight / 2, paint);
         canvas.rotate(degree);
-        canvas.translate(0, getWidth() / 3 - (maxScaleLength+textHeight));
+        canvas.translate(0, getWidth() / 3 - (maxScaleLength+textHeight*3f/4));
         canvas.rotate(-degree);
     }
 
@@ -182,7 +177,7 @@ public class TimeView extends View implements Runnable {
         if(sizeMode == MeasureSpec.EXACTLY){
             result = parentSize;
         }else{
-            result = SizeUtils.dp2px(mContext,300);
+            result = SizeUtils.dp2px(mContext, 300);
             if (sizeMode == MeasureSpec.AT_MOST){
                 result = Math.min(result,parentSize);
             }
@@ -376,13 +371,13 @@ public class TimeView extends View implements Runnable {
     public void run() {
         while (true) {
             postInvalidate();
-            if (mSecondDegree > 360) {
+            if (mSecondDegree == 360) {
                 mSecondDegree = 0;
             }
-            if (mMinDegree > 360) {
+            if (mMinDegree == 360) {
                 mMinDegree = 0;
             }
-            if (mHourDegree > 360) {
+            if (mHourDegree == 360) {
                 mHourDegree = 0;
                 mIsNight = !mIsNight;
             }
