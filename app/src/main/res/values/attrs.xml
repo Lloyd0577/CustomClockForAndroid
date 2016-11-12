@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeView">
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="circleBackground" format="color"/>
+        <attr name="minScaleColor" format="color"/>
+        <attr name="midScaleColor" format="color"/>
+        <attr name="maxScaleColor" format="color"/>
+        <attr name="minScaleLength" format="dimension"/>
+        <attr name="midScaleLength" format="dimension"/>
+        <attr name="maxScaleLength" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="isDrawText" format="boolean"/>
+        <attr name="secondPointerColor" format="color"/>
+        <attr name="minPointerColor" format="color"/>
+        <attr name="hourPointerColor" format="color"/>
+        <attr name="secondPointerLength" format="dimension"/>
+        <attr name="minPointerLength" format="dimension"/>
+        <attr name="hourPointerLength" format="dimension"/>
+        <attr name="secondPointerSize" format="dimension"/>
+        <attr name="minPointerSize" format="dimension"/>
+        <attr name="hourPointerSize" format="dimension"/>
+        <attr name="centerPointColor" format="color"/>
+        <attr name="centerPointSize" format="dimension"/>
+        <attr name="centerPointRadiu" format="dimension"/>
+        <attr name="centerPointType" format="string"/>
+        <attr name="isSecondGoSmooth" format="boolean"/>
+
+    </declare-styleable>
+    
+</resources>
