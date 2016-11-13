@@ -8,6 +8,8 @@ This is a simple demo to show you a custom clock in android.If you want to use i
 ##**Style Of Clock**
 There are many styles you can choose:
 
+![cmd-markdown-logo](https://raw.githubusercontent.com/Lloyd0577/CustomClock-/master/img/1.gif)
+
 ![cmd-markdown-logo](https://raw.githubusercontent.com/Lloyd0577/CustomClock-/master/img/1.png)
 
 
