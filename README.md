@@ -1,7 +1,7 @@
-# CustomClock(×Ô¶¨ÒåÊ±ÖÓ)
+ï»¿# CustomClock(è‡ªå®šä¹‰æ—¶é’Ÿ)
 
 
---------------------------
+
 ##**Introduction**
 This is a simple demo to show you a custom clock in android.If you want to use it in your project,you can copy the "TimeView",and "attrs" files from this demo.Few days later,I will commit it to maven repository.
 
@@ -62,7 +62,7 @@ I believe that those properties are easy to use by names.Second pointer has two 
   
 > ####void setTime(int hour, int min,int second)
 
-Set hour¡¢minutes and seconds
+Set hourã€minutes and seconds
 
 > ####int getHour()
 
@@ -79,3 +79,18 @@ Return current seconds;
 >#### void start()
 
 Start the clock.If you do not want it move,you needn't call this method.
+
+
+       
+       
+
+
+
+
+
+
+
+
+
+
+
