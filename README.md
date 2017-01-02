@@ -8,14 +8,14 @@ This is a simple demo to show you a custom clock in android.If you want to use i
 ##**Style Of Clock**
 There are many styles you can choose:
 
-![](http://upload-images.jianshu.io/upload_images/3057657-6ff84adda685b0bb.gif?imageMogr2/auto-orient/strip)
+![](https://raw.githubusercontent.com/Lloyd0577/CustomClockForAndroid/master/img/ezgif.com-video-to-gif4.gif)
 
-![](http://upload-images.jianshu.io/upload_images/3057657-0024bba74826681b.gif?imageMogr2/auto-orient/strip)
+![](https://raw.githubusercontent.com/Lloyd0577/CustomClockForAndroid/master/img/ezgif.com-634513e019.gif)
 
 
-![](http://upload-images.jianshu.io/upload_images/3057657-42e28e31983d6830.gif?imageMogr2/auto-orient/strip)
+![](https://raw.githubusercontent.com/Lloyd0577/CustomClockForAndroid/master/img/ezgif.com-video-to-gif2.gif)
 
-![](http://upload-images.jianshu.io/upload_images/3057657-1832f872d2d9eea5.gif?imageMogr2/auto-orient/strip)
+![](https://raw.githubusercontent.com/Lloyd0577/CustomClockForAndroid/master/img/ezgif.com-video-to-gif6.gif)
 
 
 
