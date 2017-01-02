@@ -13,7 +13,7 @@ There are many styles you can choose:
 ![](http://upload-images.jianshu.io/upload_images/3057657-0024bba74826681b.gif?imageMogr2/auto-orient/strip)
 
 
-![](http://upload-images.jianshu.io/upload_images/3057657-0f7fc90871df161d.gif?imageMogr2/auto-orient/strip)
+![](http://upload-images.jianshu.io/upload_images/3057657-42e28e31983d6830.gif?imageMogr2/auto-orient/strip)
 
 ![](http://upload-images.jianshu.io/upload_images/3057657-1832f872d2d9eea5.gif?imageMogr2/auto-orient/strip)
 
